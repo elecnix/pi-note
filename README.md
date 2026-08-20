@@ -35,6 +35,8 @@ That adds the extension to your settings. Reload with `/reload` (or restart pi),
 
 One warning: pi resolves every enabled command, so if another extension also registers `/note`, pi disambiguates with numeric suffixes (`/note:1`, `/note:2`). If things feel off, check your other extensions.
 
+Note that `/note` is delivered on your *next* prompt. If you quit pi before sending another prompt, the pending note has not been delivered to the model yet (it is rehydrated from the session on resume); re-invoking it surfaces it.
+
 ## How it works
 
 Both commands short-circuit because pi runs registered extension commands **before** dispatching to the model. The two commands map to two different persistence primitives:
