@@ -2,7 +2,13 @@
   "name": "pi-note",
   "version": "0.1.0",
   "description": "Pi extension adding /note (visible to the model next turn) and /private-note (never visible to the model). Neither triggers an agent turn.",
-  "keywords": ["pi-package", "pi-extension", "note", "scratchpad", "notes"],
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "note",
+    "scratchpad",
+    "notes"
+  ],
   "license": "MIT",
   "type": "module",
   "main": "./src/index.ts",
@@ -12,7 +18,9 @@
     "./LICENSE"
   ],
   "pi": {
-    "extensions": ["./src/index.ts"]
+    "extensions": [
+      "./src/index.ts"
+    ]
   },
   "peerDependencies": {
     "@earendil-works/pi-ai": "*",
@@ -23,5 +31,8 @@
     "@earendil-works/pi-ai": "*",
     "@earendil-works/pi-coding-agent": "*",
     "@earendil-works/pi-tui": "*"
+  },
+  "overrides": {
+    "node-domexception": "npm:@profoundlogic/node-domexception@^1.0.2"
   }
 }
